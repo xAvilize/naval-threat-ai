@@ -1,0 +1,11 @@
+{
+  "name": "naval-threat-ai-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"cd backend && python run.py\" \"cd websocket-server && node index.js\" \"cd frontend && npm start\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
