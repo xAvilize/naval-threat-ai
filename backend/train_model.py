@@ -1,5 +1,3 @@
-# backend/train_model.py
-
 from sklearn.linear_model import LinearRegression
 from joblib import dump
 
@@ -10,13 +8,10 @@ X_train = [
     [13.1, 80.3, 8.0, 120],
     [13.2, 80.4, 15.0, 270],
 ]
+y_train = [0.8, 0.4, 0.9, 0.2]  # risk scores
 
-y_train = [0.8, 0.4, 0.9, 0.2]  # threat risk scores
-
-# Train the model
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-# Save the model
 dump(model, "model.pkl")
-print("✅ model.pkl saved in backend/")
+print("✅ model.pkl saved.")
